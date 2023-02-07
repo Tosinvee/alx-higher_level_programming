@@ -26,4 +26,3 @@ class Student:
                     res[i] = self.__dict__[i]
             return res
         return self.__dict__
-
