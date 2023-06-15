@@ -1,16 +1,8 @@
 #!/usr/bin/node
-function factorial(n) {
-  if (isNaN(n)) {
-    return 1;
-  } else if (n === 0) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
+const number = Number(process.argv[2]);
+function factorial (number) {
+  if (number === 0 || Number.isNaN(number)) return 1;
+  return number * factorial(number - 1);
 }
-
-const input = parseInt(process.argv[2]);
-const result = factorial(input);
-
-console.log(`The factorial of ${input} is: ${result}`);
+console.log(factorial(number));
 
