@@ -11,7 +11,7 @@ if __name__ == '__main__':
         port=3306,
         host='localhost')
     cur = db.cursor()
-    cur.execute("SELECT *FROM states.id ASC")
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     states = cur.fetchall()
     for state in states:
         print(state)
