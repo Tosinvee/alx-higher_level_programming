@@ -17,7 +17,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     row = session.query(State).filter(State.name == (sys.argv[4],))
-    if len(rows) == 0:
-        print('Not found')
-    for row in rows:
-        print(row.id)    
+    try:
+        print(instance[0].id)
+    except IndexError:
+        print("Not found")
