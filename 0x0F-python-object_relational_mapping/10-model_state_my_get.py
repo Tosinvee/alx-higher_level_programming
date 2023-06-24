@@ -16,10 +16,10 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State).filter(State.name == (sys.argv[4],))
-
-    rows = session.query(State).filter(State.name == name_searched).all()
+    row = session.query(State).filter(State.name == (sys.argv[4],))
     if len(rows) == 0:
         print('Not found')
     for row in rows:
         print(row.id)
+
+    
