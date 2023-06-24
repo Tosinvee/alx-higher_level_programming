@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
 '''
- a script that deletes all State objects with a name containing the 
- letter a from the database
+a script that deletes all State objects with a name containing the 
+letter a from the database
 '''
 
 import sys
 from model_state import Base, State
-from sqlalchemy import cretae_engine
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
