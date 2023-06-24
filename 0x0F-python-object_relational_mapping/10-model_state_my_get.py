@@ -11,7 +11,7 @@ from model_state import Base, State
 
 
 if __name__ == '__main__':
-    engine =  create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
@@ -20,6 +20,4 @@ if __name__ == '__main__':
     if len(rows) == 0:
         print('Not found')
     for row in rows:
-        print(row.id)
-
-    
+        print(row.id)    
