@@ -6,8 +6,9 @@ a script that prints the State object with the name passed as argument
 
 import sys
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-from model_state import Base, state
+from sqlalchemy import (create_engine)
+from model_state import Base, State
+
 
 if __name__ == '__main__':
     engine =  create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
